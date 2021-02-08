@@ -1,0 +1,10 @@
+Define the average function :
+
+scala> def average[Double]( values: Iterable[Double] )( implicit num: Numeric[Double] ) = {
+     |   num.toDouble( values.sum ) / values.size
+     | }
+average: [Double](values: Iterable[Double])(implicit num: Numeric[Double])Double
+
+scala> average(Iterable(1, 2, 3, 4, 5, 6, 7, 8))
+res6: Double = 4.5
+
